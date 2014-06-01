@@ -3,6 +3,10 @@
 var gulp   = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
+// Add require option to accept AltJS by Constellation
+// https://github.com/sindresorhus/gulp-mocha/pull/12
+require('intelli-espower-loader');
+
 var paths = {
   lint: ['./gulpfile.js', './lib/**/*.js'],
   watch: ['./gulpfile.js', './lib/**', './test/**/*.js', '!test/{temp,temp/**}'],

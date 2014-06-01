@@ -1,7 +1,7 @@
 'use strict';
 
 var prefectureJp = require('../lib/prefecture-jp.js');
-var assert = require('assert');
+var assert = require('power-assert');
 
 describe('prefectureJp', function () {
 
