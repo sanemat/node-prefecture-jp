@@ -30,8 +30,7 @@
     "gulp-mocha": "^0.4.1",
     "intelli-espower-loader": "^0.1.0",
     "jshint-stylish": "^0.2.0",
-    "power-assert": "^0.7.2",
-    "should": "^4.0.0"
+    "power-assert": "^0.7.2"
   },
   "scripts": {
     "coveralls": "gulp test && cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
