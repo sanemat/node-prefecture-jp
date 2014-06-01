@@ -1,12 +1,12 @@
 'use strict';
 
 var prefectureJp = require('../lib/prefecture-jp.js');
-var assert = require('should');
+var assert = require('assert');
 
 describe('prefectureJp', function () {
 
   it('should be awesome', function () {
-    prefectureJp.awesome().should.equal('awesome');
+    assert.equal(prefectureJp.awesome(), 'awesome');
   });
 
 });
