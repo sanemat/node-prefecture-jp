@@ -19,6 +19,7 @@
   },
   "keywords": [],
   "dependencies": {
+    "csv-parse": "0.0.4",
     "debug": "0.8.1"
   },
   "devDependencies": {
