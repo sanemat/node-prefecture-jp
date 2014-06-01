@@ -22,6 +22,10 @@
  * data = require('./data.js');
  */
 
-var prefectureJp = require('../');
+var prefectureJp = require('../lib/prefecture-jp.js');
+var prefs = prefectureJp({schema: 'jisx0401'});
 
-prefectureJp.awesome(); // "awesome"
+prefs.search({pref: '京都'}, function(callback){
+  callback.code;// => '26'
+  callback.pref;// => '京都府'
+});
