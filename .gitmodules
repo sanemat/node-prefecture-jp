@@ -1,0 +1,3 @@
+[submodule "prefecture-jp"]
+	path = prefecture-jp
+	url = https://github.com/sanemat/prefecture-jp.git
