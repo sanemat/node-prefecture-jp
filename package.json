@@ -1,9 +1,9 @@
 {
   "name": "prefecture-jp",
-  "description": "The best module ever.",
+  "description": "Search the JIS/ISO code by prefecture in Japan, the prefecture by JIS/ISO code and so on.",
   "version": "0.0.0",
-  "homepage": "https://github.com/sanemat/prefecture-jp",
-  "bugs": "https://github.com/sanemat/prefecture-jp/issues",
+  "homepage": "https://github.com/sanemat/node-prefecture-jp",
+  "bugs": "https://github.com/sanemat/node-prefecture-jp/issues",
   "license": "MIT",
   "main": "lib/prefecture-jp.js",
   "author": {
@@ -12,12 +12,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sanemat/prefecture-jp"
+    "url": "https://github.com/sanemat/node-prefecture-jp"
   },
   "directories": {
     "test": "test/"
   },
-  "keywords": [],
+  "keywords": [
+    "prefecture",
+    "pref",
+    "jp",
+    "JIS X 0401",
+    "ISO3166-2:JP"
+  ],
   "dependencies": {
     "csv-parse": "0.0.4",
     "debug": "0.8.1"

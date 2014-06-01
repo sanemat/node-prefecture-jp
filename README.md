@@ -1,8 +1,7 @@
 # prefecture-jp
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-url]][daviddm-image] [![Coverage Status][coveralls-image]][coveralls-url]
 
-The best module ever.
-
+Search the JIS/ISO code by prefecture in Japan, the prefecture by JIS/ISO code and so on.
 
 ## Install
 
