@@ -64,9 +64,8 @@ describe('prefectureJp ISO3166-2:JP', function () {
   describe('#all', function(){
     it('should return 47 prefs', function(done){
       prefs.all(function(actual){
-        actual.length === 47;
-        actual[0].code === 'JP-01';
-        actual[0].pref === '北海道';
+        assert.equal(actual.length, 47);
+        assert.deepEqual(actual[0], { code: 'JP-01', pref: '北海道' });
         done();
       });
     });
