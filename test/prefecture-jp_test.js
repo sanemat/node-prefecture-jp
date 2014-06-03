@@ -34,4 +34,10 @@ describe('prefectureJp JIS X 0401', function () {
       done();
     })
   });
+  it('should return pref by a part of pref', function(done){
+    prefs.search({ pref: '滋賀' }, function(target){
+      assert.deepEqual(target, { code: '25', pref: '滋賀県' });
+      done();
+    })
+  });
 });
