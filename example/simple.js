@@ -23,7 +23,7 @@
  */
 
 var prefectureJp = require('../lib/prefecture-jp.js');
-var prefs = prefectureJp({schema: 'jisx0401'});
+var prefs = prefectureJp({schema: prefectureJp.JIS_X_0401});
 
 prefs.search({pref: '愛知'}, function(callback){
   callback.code;// => '23'

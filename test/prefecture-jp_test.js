@@ -7,7 +7,7 @@ describe('prefectureJp JIS X 0401', function () {
   var prefs;
 
   before(function(done){
-    prefs = prefectureJp({schema: 'jisx0401'});
+    prefs = prefectureJp({schema: prefectureJp.JIS_X_0401});
     done();
   });
   it('should return pref by pref', function(done){
@@ -46,7 +46,7 @@ describe('prefectureJp ISO3166-2:JP', function () {
   var prefs;
 
   before(function(done){
-    prefs = prefectureJp({schema: 'iso3166-2jp'});
+    prefs = prefectureJp({schema: prefectureJp.ISO3166_2JP});
     done();
   });
   it('should return pref by pref', function(done){
