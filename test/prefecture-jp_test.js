@@ -6,11 +6,21 @@ var assert = require('power-assert');
 describe('prefectureJp JIS X 0401', function () {
   var prefs;
 
-  describe('#search', function(){
+  describe('#all', function() {
     before(function(done){
       prefs = prefectureJp({schema: prefectureJp.JIS_X_0401});
       done();
     });
+    it('should return 47 prefs', function (done) {
+      prefs.all(function (actual) {
+        assert.equal(actual.length, 47);
+        assert.deepEqual(actual[0], { code: '01', pref: '北海道' });
+        done();
+      });
+    });
+  });
+
+  describe('#search', function(){
     it('should return pref by pref', function(done){
       prefs.search({ pref: '京都府' }, function(target){
         assert.deepEqual(target, { code: '26', pref: '京都府' });
@@ -55,7 +65,7 @@ describe('prefectureJp ISO3166-2:JP', function () {
     it('should return 47 prefs', function(done){
       prefs.all(function(actual){
         actual.length === 47;
-        actual[0].code === '01';
+        actual[0].code === 'JP-01';
         actual[0].pref === '北海道';
         done();
       });
