@@ -22,4 +22,16 @@ describe('prefectureJp JIS X 0401', function () {
       done();
     })
   });
+  it('should return pref by code and pref', function(done){
+    prefs.search({ code: '26', pref: '京都府' }, function(target){
+      assert.deepEqual(target, { code: '26', pref: '京都府' });
+      done();
+    })
+  });
+  it('should return null by wrong code and valid pref', function(done){
+    prefs.search({ code: '25', pref: '京都府' }, function(target){
+      assert.deepEqual(target, {});
+      done();
+    })
+  });
 });
