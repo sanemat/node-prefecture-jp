@@ -40,9 +40,9 @@ describe('prefectureJp JIS X 0401', function () {
       done();
     })
   });
-  it('should return pref but kyoto != tokyo', function(done){
-    prefs.search({ pref: '京都' }, function(target){
-      assert.deepEqual(target, { code: '26', pref: '京都府' });
+  it('should return pref contains 県', function(done){
+    prefs.search({ pref: '県' }, function(target){
+      assert.deepEqual(target.length, 43);
       done();
     })
   });
