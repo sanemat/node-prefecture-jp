@@ -3,6 +3,12 @@
 var prefectureJp = require('../lib/prefecture-jp.js');
 var assert = require('power-assert');
 
+describe('invalid schema', function(){
+  assert.doesNotThrow(function(){
+    prefectureJp({ schema: 'invalid' });
+  });
+});
+
 describe('prefectureJp JIS X 0401', function () {
   var prefs;
   before(function(done){
