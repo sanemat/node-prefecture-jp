@@ -3,14 +3,20 @@
 var prefectureJp = require('../lib/prefecture-jp.js');
 var assert = require('power-assert');
 
+describe('invalid schema', function(){
+  assert.doesNotThrow(function(){
+    prefectureJp({ schema: 'invalid' });
+  });
+});
+
 describe('prefectureJp JIS X 0401', function () {
   var prefs;
+  before(function(done){
+    prefs = prefectureJp({schema: prefectureJp.JIS_X_0401});
+    done();
+  });
 
   describe('#all', function() {
-    before(function(done){
-      prefs = prefectureJp({schema: prefectureJp.JIS_X_0401});
-      done();
-    });
     it('should return 47 prefs', function (done) {
       prefs.all(function (actual) {
         assert.equal(actual.length, 47);
