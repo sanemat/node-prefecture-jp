@@ -29,3 +29,9 @@ prefs.search({pref: '愛知'}, function(callback){
   callback.code;// => '23'
   callback.pref;// => '愛知県'
 });
+
+prefs.all(function(callback){
+  callback.length;// => '47'
+  callback[0].code;// => '01'
+  callback[0].pref;// => 北海道
+});
