@@ -56,7 +56,8 @@ describe('prefectureJp ISO3166-2:JP', function () {
       prefs.all(function(actual){
         actual.length === 47;
         actual[0].code === '01';
-        actual[0].pref === '北海道'
+        actual[0].pref === '北海道';
+        done();
       });
     });
   });
