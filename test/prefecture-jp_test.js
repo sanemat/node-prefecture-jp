@@ -46,12 +46,22 @@ describe('prefectureJp JIS X 0401', function () {
 
 describe('prefectureJp ISO3166-2:JP', function () {
   var prefs;
+  before(function(done){
+    prefs = prefectureJp({schema: prefectureJp.ISO3166_2JP});
+    done();
+  });
+
+  describe('#all', function(){
+    it('should return 47 prefs', function(done){
+      prefs.all(function(actual){
+        actual.length === 47;
+        actual[0].code === '01';
+        actual[0].pref === '北海道'
+      });
+    });
+  });
 
   describe('#search', function(){
-    before(function(done){
-      prefs = prefectureJp({schema: prefectureJp.ISO3166_2JP});
-      done();
-    });
     it('should return pref by pref', function(done){
       prefs.search({ pref: '京都府' }, function(target){
         assert.deepEqual(target, { code: 'JP-26', pref: '京都府' });
