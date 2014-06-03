@@ -14,22 +14,19 @@ $ npm install --save prefecture-jp
 
 ```javascript
 var prefectureJp = require('prefecture-jp');
-prefectureJp.awesome(); // "awesome"
+var prefs = prefectureJp({ schema: prefectureJp.JIS_X_0401 });
+
+prefs.search({pref: '愛知'}, function(callback){
+  callback.code;// => '23'
+  callback.pref;// => '愛知県'
+});
 ```
 
-## API
-
-_(Coming soon)_
-
+[example](https://github.com/sanemat/node-prefecture-jp/blob/master/example/simple.js)
 
 ## Contributing
 
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [gulp](http://gulpjs.com/).
-
-
-## Release History
-
-_(Nothing yet)_
 
 
 ## License
